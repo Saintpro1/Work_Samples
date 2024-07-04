@@ -1,0 +1,65 @@
+a
+{
+    padding: 10px 25px;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+a span
+{
+    position: relative;
+    z-index: 1;
+    color: #00545d;
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+a .liq
+{
+    position: absolute;
+    right: 130px;
+    top: 15px;
+    width: 205px;
+    height: 50px;
+    background: #00ffff;
+    box-shadow: inset 0 0 50px rgba(0,255,255,.5);
+    transition: 0.5s;
+}
+
+a .liq:before, a .liq:after
+{
+    content: '';
+    position: absolute;
+    width: 205px;
+    height: 50px;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+a .liq:before
+{
+    border-radius: 60%;
+    background: rgba(255, 255, 255,1);
+    animation: animate 5s linear inherit;
+}
+
+a .liq:after
+{
+    border-radius: 55%;
+    background: rgba(255, 255, 255,0.5);
+    animation: animate 10s linear inherit;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translate(-75, -50%) rotate(0deg);
+    }
+
+    100%
+    {
+        transform: translate(-75%, -50%) rotate(360deg);
+    }
+}
